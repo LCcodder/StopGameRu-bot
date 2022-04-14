@@ -1,0 +1,26 @@
+{
+  "name": "ds_r6_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "returnJson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node returnJson.js ",
+    "dev:": "nodemon returnJson.js"
+  },
+  "keywords": [],
+  "author": "LCcodder",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cheerio": "^1.0.0-rc.10",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "install": "^0.13.0",
+    "nodemailer": "^6.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
