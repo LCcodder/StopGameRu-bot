@@ -66,8 +66,8 @@ node defaultClient.js
 ```
 
 ___
-# Tech specs
-## *Build 1.0:*
+## Tech specs
+### *Build 1.0:*
 + node.js `v16.14.2.`
 + axios `0.26.1`
 + cheerio `1.0.0-rc.10`
@@ -79,4 +79,4 @@ ___
 + nodemon `2.0.15`
  
 ___
-# Made with :heart: by [*LCcodder*](https://github.com/LCcodder)
+## Made with :heart: by [*LCcodder*](https://github.com/LCcodder)
