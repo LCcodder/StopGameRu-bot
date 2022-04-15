@@ -96,7 +96,7 @@ class Scrapper {
         return content
     }
 
-    async parseAsync (message, [fromPage, toPage], keywords) {
+    async parseAsync ( [fromPage, toPage], keywords) {
         // debug
         var time = performance.now();
 
@@ -116,10 +116,9 @@ class Scrapper {
 
                 switch (typeof(consensusExeption)) {
                     case "string":
-                        message.channel.send(consensusExeption)
-                        return
+                        // returns consensus error
+                        return consensusExeption
                     case "number":
-                        
                         fromPage = 1,
                         // assigns consensus status when passing validation
                         toPage = consensusExeption
@@ -127,9 +126,9 @@ class Scrapper {
                         keywordsArray = keyword.getKeywords()
                         break
                     default:
-                        message.channel.send("Unpredictable consensus status")
-                        return
-                }
+                        // this never gonna happened )))
+                        return "Unpredictable consensus status"
+                    }
             } else {
                 // assings empty array if keywords does not exists
                 keywordsArray = []
@@ -148,8 +147,8 @@ class Scrapper {
             // switching status
             switch (typeof(consensusExeption)) {
                 case "string":
-                    message.channel.send(consensusExeption)
-                    return
+                    // returns consensus error
+                    return consensusExeption
                 case "number":
                     fromPage = 1,
                     // assigns consensus status when passing validation
@@ -159,8 +158,7 @@ class Scrapper {
                     break
                 default:
                     // this never gonna happened )))
-                    message.channel.send("Unpredictable consensus status")
-                    return
+                    return "Unpredictable consensus status"
             }
         }
 
@@ -243,16 +241,11 @@ class Scrapper {
 
         // debug
         time = performance.now() - time;
-        console.log('lead time = ' + time  + " ms");
+        console.log('lead time = ' + time  + " ms")
         
-        // sending result via discord api
-        try {
-            message.channel.send(result)
-        } catch (e) {
-            console.log(e)
-        }
-        
-        
+        // return result via discord api
+        return result
+
     }
 
 }

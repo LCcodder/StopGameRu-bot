@@ -1,5 +1,5 @@
 {
-    "serverAdmin": "your server admin name",
+    "serverAdmin": "YOUR CHANNEL ADMIN'S NAME",
     "commandsMessage": "Commands: \n1)'getfresh' - sends fresh news\n2)'getkw + your keyword' - sends news by your keyword",
     "cfg": {
         
@@ -19,7 +19,7 @@
             "DIRECT_MESSAGE_TYPING"
         ]
     },
-    "token": "your bot token",
+    "token": "YOUR TOKEN",
     "callback": {
         "callbackRepeat": 12,
         "callbackKeyWords": "none"

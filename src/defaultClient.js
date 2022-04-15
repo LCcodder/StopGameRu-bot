@@ -83,6 +83,7 @@ bot.on('messageCreate', (message) => {
     if (botCommandList[0].includes(message.content)) {
         let requestedTime = new Date()
         // updating users metadata
+        
         let currentUserData = metadata.getUserData(message.author, requestedTime, message.content)
         usersArray.push(currentUserData)
     }
@@ -93,7 +94,10 @@ bot.on('messageCreate', (message) => {
     if (message.content.toLowerCase().includes(botCommandList[0][1])) { 
         // slicing keywords
         let keyWords = message.content.slice(6).toLowerCase()
-        Parser.parseAsync(message, [], keyWords)
+
+        Parser.parseAsync([], keyWords).then((result) => {
+            message.channel.send(result)
+        })
         return
     }
 
@@ -113,21 +117,28 @@ bot.on('messageCreate', (message) => {
             // getting first page
             let pagesFrom = message.content.slice(9, message.content.indexOf("-"))
 
-            Parser.parseAsync(message, [pagesFrom, pagesTo]) 
+            Parser.parseAsync([pagesFrom, pagesTo]).then((result) => {
+                message.channel.send(result)
+            })
             return
         }
 
         // checking for 'no-page' in the end
         if(message.content === 'getfresh') {
            
-            Parser.parseAsync(message, [1, 3])
+            Parser.parseAsync([1, 3]).then((result) => {
+                message.channel.send(result)
+            })
             return
         }
 
 
         // checking for page index and setting default values
         let pagesParse = parseInt(message.content.slice(-1), 10)
-        Parser.parseAsync(message, [pagesParse, pagesParse])  
+
+        Parser.parseAsync([pagesParse, pagesParse]).then((result) => {
+            message.channel.send(result)
+        })
         return  
 
     }

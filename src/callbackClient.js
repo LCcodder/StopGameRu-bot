@@ -1,8 +1,7 @@
 // importing
-const scrapperConfig = require('./scrapper_config.json'),
-    botConfig = require('./bot_config.json')
+const botConfig = require('./bot_config.json'),
     Discord = require('discord.js'),
-    Scrapper = require('./Scrapper')
+    Scrapper = require('./scrapper/Scrapper')
 
 // converte to miliseconds function
 const getTime = (timeInHours) => {
@@ -44,6 +43,6 @@ bot.on('ready', (client) => {
 bot.once('messageCreate', (message) => {
     // loop cycle with time interval
     message.channel.send("Starting callback...")
-    setInterval(() => Parser.parseAsync(message, []), sendingTime)    
+    setInterval(() => Parser.parseAsync([]).then((result) => message.channel.send(result)), sendingTime)    
     
 })
