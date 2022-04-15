@@ -4,7 +4,7 @@
 ___
 
 
-To use this bot you need to clone the repository (libraries are already installed), insert your discord bot token in "bot_config.json" file. Next, you need to set up some the parameters in the same file:
+To use this bot you need to clone the repository (and install the libraries), insert your discord bot token in "bot_config.json" file. Next, you need to set up some the parameters in the same file:
 
 
 ___
