@@ -67,7 +67,7 @@ node defaultClient.js
 
 ___
 ## Tech specs
-### *Build 1.0.1 (Pre-realise):*
+### *Build 1.0.2 (Beta-realise):*
 + node.js `v16.14.2.`
 + axios `0.26.1`
 + cheerio `1.0.0-rc.10`
