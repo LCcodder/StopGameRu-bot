@@ -26,6 +26,8 @@ ___
 
 ## *How to setup?*
 ### Firstly
++ Install node.js [here] (https://nodejs.org/en/)
++ Install dependences in .bat file `discord.js, cheerio, axios, dotenv, nodemailer, express, nodemon`
 + Clone repository in your directory *(dependences not required)*
 + Set your bot token in *bot_config.json* file: `"token": "OTU4NzQxNzcfdsfdsgfdghjg233454g456gfh4hY"`. You can get it [here](https://discord.com/developers/applications).
 + Set your email credentials in .env file for analytics send (not necessary).
@@ -64,8 +66,8 @@ node defaultClient.js
 ```
 
 ___
-# Tech specs
-## *Build 1.0:*
+## Tech specs
+### *Build 1.0.1 (Pre-realise):*
 + node.js `v16.14.2.`
 + axios `0.26.1`
 + cheerio `1.0.0-rc.10`
@@ -77,4 +79,4 @@ ___
 + nodemon `2.0.15`
  
 ___
-# Made with :heart: by [*LCcodder*](https://github.com/LCcodder)
+## Made with :heart: by [*LCcodder*](https://github.com/LCcodder)
