@@ -4,7 +4,7 @@
 ___
 
 
-To use this bot you need to clone the repository (libraries are already installed), insert your discord bot token in "bot_config.json" file. Next, you need to set the parameters in the "scrapper_config.json" and "mailer_config.json" files:
+To use this bot you need to clone the repository (libraries are already installed), insert your discord bot token in "bot_config.json" file. Next, you need to set up some the parameters in the same file:
 
 
 ___
@@ -26,7 +26,7 @@ ___
 
 ## *How to setup?*
 ### Firstly
-+ Install node.js [here] (https://nodejs.org/en/)
++ Install node.js [here](https://nodejs.org/en/)
 + Install dependences in .bat file `discord.js, cheerio, axios, dotenv, nodemailer, express, nodemon`
 + Clone repository in your directory *(dependences not required)*
 + Set your bot token in *bot_config.json* file: `"token": "OTU4NzQxNzcfdsfdsgfdghjg233454g456gfh4hY"`. You can get it [here](https://discord.com/developers/applications).
@@ -37,16 +37,16 @@ ___
 
 ### Default mode
 
-> ***1)*** Setup your analytics send (not necessary) in */analytics/mailer_config.json*: `"adress":"toprobocopid@gmail.com",
+> ***1)*** Setup your analytics send (not necessary) in *bot_config.json*: `"adress":"toprobocopid@gmail.com",
 "analyticsPersonsCount": 20`
 
 > ***2)*** Then just launch **defaultClient.js** and enjoy 
 ### Callback mode
 
 
->***1)*** If you need keywords search you can setup them in *scrapper_config.json* file: `"callbackKeyWords": "cyberpunk",`
+>***1)*** If you need keywords search you can setup them in *bot_config.json* file: `"callbackKeyWords": "cyberpunk",`
 >> Or you can setup multiple keywords like: `"callbackKeyWords": "cyberpunk;xbox;playstation",`
->>> Or just set `"none"` of you don't want them
+>>> Or just set `"none"` of you don't want to use it
 
 >***2)*** Setup the number of hours after which the message will be sent in same file: `"callbackRepeat": 1`
 
