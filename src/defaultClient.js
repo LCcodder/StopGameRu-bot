@@ -1,7 +1,7 @@
 // importing metadata and analytics modules
-const { Metadata } = require('./analitycs/Analytics'),
-    { Analytics } = require('./analitycs/Analytics'),
-    { Logs } = require('./analitycs/Analytics')
+const { Metadata, Analytics, Logs } = require('./analitycs/Analytics')
+    // { Analytics } = require('./analitycs/Analytics'),
+    // { Logs } = require('./analitycs/Analytics')
 
     
 // importing other modules
@@ -83,7 +83,6 @@ bot.on('messageCreate', (message) => {
     if (botCommandList[0].includes(message.content)) {
         let requestedTime = new Date()
         // updating users metadata
-        
         let currentUserData = metadata.getUserData(message.author, requestedTime, message.content)
         usersArray.push(currentUserData)
     }
@@ -109,7 +108,7 @@ bot.on('messageCreate', (message) => {
         return
     }
 
-    if (message.content.includes(botCommandList[0][0].toLowerCase())) {
+    if (message.content.toLowerCase().includes(botCommandList[0][0])) {
         if (message.content.includes("-")) {
             
             // getting last page
@@ -135,7 +134,6 @@ bot.on('messageCreate', (message) => {
 
         // checking for page index and setting default values
         let pagesParse = parseInt(message.content.slice(-1), 10)
-
         Parser.parseAsync([pagesParse, pagesParse]).then((result) => {
             message.channel.send(result)
         })

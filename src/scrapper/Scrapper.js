@@ -82,18 +82,17 @@ class Scrapper {
     }
     
     static #lengthShortening(content) {
-        // symbols count sort
+        // symbols count sort      
         if (content.length >= 2000) {
-                
             content = content.slice(0, 2000)
-            
+        
             for (let i = 2000; i <= content.length; i = i - 1) {
                 content = content.slice(0, i)
                 if (content.slice(-1) == ';') return content;
             }
-            
         }
         return content
+        
     }
 
     async parseAsync ( [fromPage, toPage], keywords) {
@@ -201,16 +200,16 @@ class Scrapper {
                     // keyword status checking
                     if (keywordsArray[0] == undefined) {
                         
-                        result += currentCaption.slice(0, -1) + ";\n"
-                        result += captionURL + "\n"      
+                        result += currentCaption.slice(0, -1) + "\n"
+                        result += captionURL + ";\n"      
                     }
                     if ( keywordsArray[0] != undefined) {
                         // bruteforce keyword array (fuck binary tree, it's 2 language brainfuck)
                         for (let y = 0; y < keywordsArray.length; y++) {
                             // matching
                             if (currentCaption.toLowerCase().includes(keywordsArray[y])) {
-                                result += currentCaption.slice(0, -1) + ";\n"
-                                result += captionURL + "\n"
+                                result += currentCaption.slice(0, -1) + "\n"
+                                result += captionURL + ";\n"
                             }
                         }    
                     } 
@@ -220,10 +219,10 @@ class Scrapper {
             break
         }
 
-
+        
         // making less or same than 2000 symbols 
         result = Scrapper.#lengthShortening(result)
-
+        
         // errors exeption
         switch (result) {
             case '':
