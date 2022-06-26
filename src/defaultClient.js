@@ -1,8 +1,5 @@
 // importing metadata and analytics modules
 const { Metadata, Analytics, Logs } = require('./analitycs/Analytics')
-    // { Analytics } = require('./analitycs/Analytics'),
-    // { Logs } = require('./analitycs/Analytics')
-
     
 // importing other modules
 const botConfig = require('./bot_config.json')
